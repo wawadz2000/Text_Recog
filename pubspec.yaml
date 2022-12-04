@@ -21,10 +21,28 @@ dependencies:
 
   # copy text to clipboard
   clipboard: ^0.1.2+8
+  # open app
+  external_app_launcher: ^3.1.0
+  path_provider: ^2.0.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: ^0.9.2
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "lib/icons/voice.png"
+
 
 flutter:
+  fonts:
+    - family: NerkoOne
+      fonts:
+        - asset: lib/fonts/NerkoOne-Regular.ttf
+    - family: lato
+      fonts:
+        - asset: lib/fonts/Lato-Regular.ttf
+
   uses-material-design: true

@@ -13,13 +13,19 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  String text = 'Press the button and start speaking';
+  String text = 'Text Here...';
   bool isListening = false;
 
   @override
   Widget build(BuildContext context) => Scaffold(
+        backgroundColor: Colors.green[50],
         appBar: AppBar(
-          title: Text(MyApp.title),
+          title: Text(MyApp.title,
+          style: TextStyle(
+            fontFamily: 'NerkoOne',
+            fontSize: 50
+          ),
+          ),
           centerTitle: true,
           actions: [
             Builder(
@@ -43,9 +49,10 @@ class _HomePageState extends State<HomePage> {
             text: text,
             terms: Command.all,
             textStyle: TextStyle(
-              fontSize: 32.0,
+              fontSize: 24.0,
               color: Colors.black,
               fontWeight: FontWeight.w400,
+              fontFamily: 'lato'
             ),
             textStyleHighlight: TextStyle(
               fontSize: 32.0,
@@ -60,7 +67,7 @@ class _HomePageState extends State<HomePage> {
           endRadius: 75,
           glowColor: Theme.of(context).primaryColor,
           child: FloatingActionButton(
-            child: Icon(isListening ? Icons.mic : Icons.mic_none, size: 36),
+            child: Icon(isListening ? Icons.record_voice_over_outlined : Icons.mic_outlined, size: 36),
             onPressed: toggleRecording,
           ),
         ),

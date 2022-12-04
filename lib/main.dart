@@ -13,13 +13,13 @@ Future main() async {
 }
 
 class MyApp extends StatelessWidget {
-  static final String title = 'Speech to Text';
+  static final String title = 'Speech';
 
   @override
   Widget build(BuildContext context) => MaterialApp(
         debugShowCheckedModeBanner: false,
         title: title,
-        theme: ThemeData(primarySwatch: Colors.purple),
+        theme: ThemeData(primarySwatch: Colors.green),
         home: HomePage(),
       );
 }
